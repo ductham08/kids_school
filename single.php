@@ -42,19 +42,19 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="class.html" class="nav-item nav-link">Classes</a>
-                    <a href="team.html" class="nav-item nav-link">Teachers</a>
-                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="class.php" class="nav-item nav-link">Classes</a>
+                    <a href="team.php" class="nav-item nav-link">Teachers</a>
+                    <a href="gallery.php" class="nav-item nav-link">Gallery</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            <a href="blog.php" class="dropdown-item">Blog Grid</a>
+                            <a href="single.php" class="dropdown-item">Blog Detail</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
                 <a href="" class="btn btn-primary px-4">Join Class</a>
             </div>
