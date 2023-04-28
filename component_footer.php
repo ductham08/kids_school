@@ -21,62 +21,60 @@
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-primary mb-4">Get In Touch</h3>
+            <h3 class="text-primary mb-4">Liên Hệ</h3>
             <div class="d-flex">
                 <h4 class="fa fa-map-marker-alt text-primary"></h4>
                 <div class="pl-3">
-                    <h5 class="text-white">Address</h5>
-                    <p>123 Street, New York, USA</p>
+                    <h5 class="text-white">Địa chỉ</h5>
+                    <p>Mai Dịch, Cầu Giấy, Hà Nội</p>
                 </div>
             </div>
             <div class="d-flex">
                 <h4 class="fa fa-envelope text-primary"></h4>
                 <div class="pl-3">
                     <h5 class="text-white">Email</h5>
-                    <p>info@example.com</p>
+                    <p>KidKinder@gmail.com</p>
                 </div>
             </div>
             <div class="d-flex">
                 <h4 class="fa fa-phone-alt text-primary"></h4>
                 <div class="pl-3">
-                    <h5 class="text-white">Phone</h5>
-                    <p>+012 345 67890</p>
+                    <h5 class="text-white">Điện thoại</h5>
+                    <p>012 345 678</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
             <h3 class="text-primary mb-4">Quick Links</h3>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Classes</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Teachers</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Blog</a>
-                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                <a class="text-white mb-2" href="./index.php"><i class="fa fa-angle-right mr-2"></i>Trang Chủ</a>
+                <a class="text-white mb-2" href="./about.php"><i class="fa fa-angle-right mr-2"></i>Về Chúng Mình</a>
+                <a class="text-white mb-2" href="./class.php"><i class="fa fa-angle-right mr-2"></i>Lớp Học</a>
+                <a class="text-white mb-2" href="./team.php"><i class="fa fa-angle-right mr-2"></i>Giáo Viên</a>
+                <a class="text-white mb-2" href="./blog.php"><i class="fa fa-angle-right mr-2"></i>Bài Viết</a>
+                <a class="text-white" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Liên Hệ</a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
-            <h3 class="text-primary mb-4">Newsletter</h3>
+            <h3 class="text-primary mb-4">Nhận Thông Tin Mới</h3>
             <form action="">
                 <div class="form-group">
-                    <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
+                    <input type="text" class="form-control border-0 py-4" placeholder="Họ và Tên" required="required" />
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
+                    <input type="email" class="form-control border-0 py-4" placeholder="Email"
                         required="required" />
                 </div>
                 <div>
-                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Submit Now</button>
+                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Gửi ngay</button>
                 </div>
             </form>
         </div>
     </div>
     <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, .2);;">
         <p class="m-0 text-center text-white">
-            &copy; <a class="text-primary font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.
-
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            Designed by <a class="text-primary font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+            &copy; 
+            Bản quyền thiết kế thuộc về KidKinder
         </p>
     </div>
 </div>

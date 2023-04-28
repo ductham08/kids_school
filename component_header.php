@@ -1,5 +1,12 @@
 <?php
+    session_start();
     require ("./database/url.php");
+
+    if($_SESSION["user"]){
+        $href_info = "./signIn.php";
+    } else {
+        $href_info = "./signIn.php";
+    }
 
 
 ?>
@@ -16,21 +23,17 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav font-weight-bold mx-auto py-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="about.php" class="nav-item nav-link">About</a>
-                <a href="class.php" class="nav-item nav-link">Classes</a>
-                <a href="team.php" class="nav-item nav-link">Teachers</a>
-                <a href="gallery.php" class="nav-item nav-link">Gallery</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 m-0">
-                        <a href="blog.php" class="dropdown-item">Blog Grid</a>
-                        <a href="single.php" class="dropdown-item">Blog Detail</a>
-                    </div>
-                </div>
-                <a href="contact.php" class="nav-item nav-link">Contact</a>
+                <a href="index.php" class="nav-item nav-link">Trang Chủ</a>
+                <a href="about.php" class="nav-item nav-link">Về Chúng Mình</a>
+                <a href="class.php" class="nav-item nav-link">Lớp Học</a>
+                <a href="team.php" class="nav-item nav-link">Giáo Viên</a>
+                <a href="blog.php" class="nav-item nav-link">Bài Viết</a>
+                <a href="single.php" class="nav-item nav-link">Chi Tiết Bài Viết</a>
+                <a href="contact.php" class="nav-item nav-link">Liên Hệ</a>
             </div>
-            <a href="" class="btn btn-primary px-4">Join Class</a>
+            <a href="<?= $href_info ?>">
+                <i class="fas fa-user" style="color: #00394f;"></i>
+            </a>
         </div>
     </nav>
 </div>

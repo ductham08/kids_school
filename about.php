@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>KidKinder - Kindergarten Website Template</title>
+    <title>KidKinder</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -21,11 +21,11 @@
     <!-- Header Start -->
     <div class="container-fluid bg-primary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-            <h3 class="display-3 font-weight-bold text-white">About Us</h3>
+            <h3 class="display-3 font-weight-bold text-white">Về Chúng Mình</h3>
             <div class="d-inline-flex text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <p class="m-0"><a class="text-white" href="">Trang Chủ</a></p>
                 <p class="m-0 px-2">/</p>
-                <p class="m-0">About Us</p>
+                <p class="m-0">Về Chúng Mình</p>
             </div>
         </div>
     </div>
@@ -40,8 +40,8 @@
                     <img class="img-fluid rounded mb-5 mb-lg-0" src="img/about-1.jpg" alt="">
                 </div>
                 <div class="col-lg-7">
-                    <p class="section-title pr-5"><span class="pr-2">Learn About Us</span></p>
-                    <h1 class="mb-4">Best School For Your Kids</h1>
+                    <p class="section-title pr-5"><span class="pr-2">Hiểu thêm về KidKinder</span></p>
+                    <h1 class="mb-4">Ngôi nhà thứ hai của các bé</h1>
                     <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
                         ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
                         dolor</p>
@@ -57,7 +57,7 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
+                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Xem thêm</a>
                 </div>
             </div>
         </div>
