@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-lg-7">
                     <p class="section-title pr-5"><span class="pr-2">Hiểu thêm về KidKinder</span></p>
-                    <h1 class="mb-4">Ngôi nhà thứ hai của các bé</h1>
+                    <h1 class="mb-4">Ngôi nhà thứ hai của những thiên thần nhỏ</h1>
                     <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
                         ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
                         dolor</p>

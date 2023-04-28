@@ -21,7 +21,7 @@
     <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
         <div class="row align-items-center px-3">
             <div class="col-lg-6 text-center text-lg-left">
-                <h4 class="text-white mb-4 mt-5 mt-lg-0">Ngôi nhà thứ hai của các bé </h4>
+                <h4 class="text-white mb-4 mt-5 mt-lg-0">Ngôi nhà thứ hai của những thiên thần nhỏ</h4>
                 <h1 class="display-3 font-weight-bold text-white">Phương pháp học tập mới cho các bé</h1>
                 <p class="text-white mb-4">Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed sit.
                     Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita
