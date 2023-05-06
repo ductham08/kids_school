@@ -23,10 +23,9 @@
             <div class="col-lg-6 text-center text-lg-left">
                 <h4 class="text-white mb-4 mt-5 mt-lg-0">Ngôi nhà thứ hai của những thiên thần nhỏ</h4>
                 <h1 class="display-3 font-weight-bold text-white">Phương pháp học tập mới cho các bé</h1>
-                <p class="text-white mb-4">Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed sit.
-                    Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita
-                    lorem dolore sed stet et est justo dolore.</p>
-                <a href="./about.php" class="btn btn-secondary mt-1 py-3 px-5">Xem thêm</a>
+                <p class="text-white mb-4">
+                    KidKinder là một nhà trẻ chuyên nghiệp và thân thiện với trẻ em, cung cấp môi trường học tập và phát triển đầy sáng tạo và an toàn cho các em nhỏ từ 6 tháng đến 5 tuổi. Với đội ngũ giáo viên giàu kinh nghiệm và các hoạt động giáo dục đa dạng, KidKinder là lựa chọn lý tưởng cho các bậc phụ huynh có nhu cầu chăm sóc và giáo dục cho con em mình.
+                </p>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <img class="img-fluid mt-5" src="img/header.png" alt="">
@@ -45,7 +44,9 @@
                         <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
                             <h5>Trò chơi năng động</h5>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                            <p class="m-0">
+                                Trò chơi là một phần không thể thiếu trong môi trường học tập và giáo dục của nhà trẻ, giúp trẻ em rèn luyện kỹ năng xã hội, tăng cường sự sáng tạo và phát triển thể chất. Những hoạt động như xếp hình...
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -54,7 +55,9 @@
                         <i class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
                             <h5>Học cùng âm nhạc</h5>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                            <p class="m-0">
+                                Âm nhạc là một phương tiện tuyệt vời để giáo dục và phát triển các kỹ năng của trẻ em. Hát, nhảy và chơi nhạc cụ không chỉ giúp trẻ phát triển khả năng thẩm mỹ, sự nhạy cảm âm nhạc, mà...
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -63,7 +66,9 @@
                         <i class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
                             <h5>Nghệ thuật</h5>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                            <p class="m-0">
+                                Nghệ thuật là một lĩnh vực đa dạng và phong phú, giúp trẻ em khám phá và thể hiện sự sáng tạo của mình thông qua các hình thức như vẽ tranh, điêu khắc, chạm khắc, xếp giấy, và chơi đồ chơi sáng tạo...
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -71,8 +76,10 @@
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
                         <i class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
-                            <h5>Dã ngoại</h5>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                            <h5>Những chuyến dã ngoại</h5>
+                            <p class="m-0">
+                                Những chuyến dã ngoại là cơ hội để trẻ em khám phá thiên nhiên và học hỏi về môi trường xung quanh. Khi tham gia vào các hoạt động dã ngoại, trẻ có thể rèn luyện các kỹ năng...
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -80,8 +87,10 @@
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
                         <i class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
-                            <h5>Thức ăn dinh dưỡng</h5>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                            <h5>Chế độ ăn phù hợp</h5>
+                            <p class="m-0">
+                                Một chế độ ăn phù hợp là cực kỳ quan trọng trong việc phát triển và tăng cường sức khỏe của trẻ em. Các bữa ăn hàng ngày của trẻ nên cung cấp đầy đủ các dưỡng chất cần thiết, bao gồm protein...
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -89,8 +98,10 @@
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
                         <i class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
-                            <h5>Học tập ngoại khóa</h5>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                            <h5>Học tập vui vẻ</h5>
+                            <p class="m-0">
+                                Học tập vui vẻ là một phương pháp giáo dục hiệu quả giúp trẻ em hứng thú và động lực trong quá trình học tập. Khi học tập trở nên thú vị và hấp dẫn, trẻ em sẽ dễ dàng tiếp thu và ghi nhớ kiến thức hơn...
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -108,24 +119,24 @@
                     <img class="img-fluid rounded mb-5 mb-lg-0" src="img/about-1.jpg" alt="">
                 </div>
                 <div class="col-lg-7">
-                    <p class="section-title pr-5"><span class="pr-2">Learn About Us</span></p>
-                    <h1 class="mb-4">Best School For Your Kids</h1>
-                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                        dolor</p>
+                    <p class="section-title pr-5"><span class="pr-2">HIỂU THÊM VỀ KIDKINDER</span></p>
+                    <h1 class="mb-4">Ngôi nhà thứ hai của những thiên thần nhỏ</h1>
+                    <p>
+                        Trẻ em là tương lai của chúng ta và giáo dục là yếu tố quan trọng trong sự phát triển toàn diện của họ. Chính vì vậy, việc tạo ra một môi trường học tập và giáo dục thích hợp là điều cực kỳ quan trọng. Tại KidKinder, các em được rèn luyện kỹ năng, phát triển sáng tạo và tăng cường sức khỏe, giúp các em trở thành những người trưởng thành tốt và có sự nghiệp thành công trong tương lai.
+                    </p>
                     <div class="row pt-2 pb-4">
                         <div class="col-6 col-md-4">
                             <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
                         </div>
                         <div class="col-6 col-md-8">
                             <ul class="list-inline m-0">
-                                <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
+                                <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>Môi trường giáo dục thân thiện và an toàn</li>
+                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Giáo viên có tâm huyết và chuyên nghiệp</li>
+                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Chương trình giáo dục đa dạng và phù hợp</li>
                             </ul>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
+                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Xem thêm</a>
                 </div>
             </div>
         </div>
@@ -137,92 +148,92 @@
     <div class="container-fluid pt-5">
         <div class="container">
             <div class="text-center pb-2">
-                <p class="section-title px-5"><span class="px-2">Popular Classes</span></p>
-                <h1 class="mb-4">Classes for Your Kids</h1>
+                <p class="section-title px-5"><span class="px-2">Lớp Học</span></p>
+                <h1 class="mb-4">Lớp học cho bé</h1>
             </div>
             <div class="row">
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
                         <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
                         <div class="card-body text-center">
-                            <h4 class="card-title">Drawing Class</h4>
+                            <h4 class="card-title">Lớp vẽ</h4>
                             <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
                         </div>
                         <div class="card-footer bg-transparent py-4 px-5">
                             <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Age of Kids</strong></div>
-                                <div class="col-6 py-1">3 - 6 Years</div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Độ tuổi</strong></div>
+                                <div class="col-6 py-1">3 - 6 Tuổi</div>
                             </div>
                             <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Total Seats</strong></div>
-                                <div class="col-6 py-1">40 Seats</div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Số lượng</strong></div>
+                                <div class="col-6 py-1">40 Trẻ</div>
                             </div>
                             <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Class Time</strong></div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Thời gian</strong></div>
                                 <div class="col-6 py-1">08:00 - 10:00</div>
                             </div>
                             <div class="row">
-                                <div class="col-6 py-1 text-right border-right"><strong>Tution Fee</strong></div>
-                                <div class="col-6 py-1">$290 / Month</div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Học phí</strong></div>
+                                <div class="col-6 py-1">3.500.000đ</div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Đăng ký</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-2.jpg" alt="">
+                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
                         <div class="card-body text-center">
-                            <h4 class="card-title">Language Learning</h4>
+                            <h4 class="card-title">Lớp vẽ</h4>
                             <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
                         </div>
                         <div class="card-footer bg-transparent py-4 px-5">
                             <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Age of Kids</strong></div>
-                                <div class="col-6 py-1">3 - 6 Years</div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Độ tuổi</strong></div>
+                                <div class="col-6 py-1">3 - 6 Tuổi</div>
                             </div>
                             <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Total Seats</strong></div>
-                                <div class="col-6 py-1">40 Seats</div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Số lượng</strong></div>
+                                <div class="col-6 py-1">40 Trẻ</div>
                             </div>
                             <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Class Time</strong></div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Thời gian</strong></div>
                                 <div class="col-6 py-1">08:00 - 10:00</div>
                             </div>
                             <div class="row">
-                                <div class="col-6 py-1 text-right border-right"><strong>Tution Fee</strong></div>
-                                <div class="col-6 py-1">$290 / Month</div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Học phí</strong></div>
+                                <div class="col-6 py-1">3.500.000đ</div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Đăng ký</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-3.jpg" alt="">
+                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
                         <div class="card-body text-center">
-                            <h4 class="card-title">Basic Science</h4>
+                            <h4 class="card-title">Lớp vẽ</h4>
                             <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
                         </div>
                         <div class="card-footer bg-transparent py-4 px-5">
                             <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Age of Kids</strong></div>
-                                <div class="col-6 py-1">3 - 6 Years</div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Độ tuổi</strong></div>
+                                <div class="col-6 py-1">3 - 6 Tuổi</div>
                             </div>
                             <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Total Seats</strong></div>
-                                <div class="col-6 py-1">40 Seats</div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Số lượng</strong></div>
+                                <div class="col-6 py-1">40 Trẻ</div>
                             </div>
                             <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Class Time</strong></div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Thời gian</strong></div>
                                 <div class="col-6 py-1">08:00 - 10:00</div>
                             </div>
                             <div class="row">
-                                <div class="col-6 py-1 text-right border-right"><strong>Tution Fee</strong></div>
-                                <div class="col-6 py-1">$290 / Month</div>
+                                <div class="col-6 py-1 text-right border-right"><strong>Học phí</strong></div>
+                                <div class="col-6 py-1">3.500.000đ</div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Đăng ký</a>
                     </div>
                 </div>
             </div>
@@ -236,41 +247,41 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7 mb-5 mb-lg-0">
-                    <p class="section-title pr-5"><span class="pr-2">Book A Seat</span></p>
-                    <h1 class="mb-4">Book A Seat For Your Kid</h1>
-                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                        dolor</p>
+                    <p class="section-title pr-5"><span class="pr-2">Đăng Ký Tư Vấn</span></p>
+                    <h1 class="mb-4">Đăng Ký Tư Vấn Lớp Học </h1>
+                    <p>
+                        Chương trình giáo dục cho trẻ nhỏ tại KidKinder được thiết kế đặc biệt để giúp trẻ phát triển toàn diện, tăng cường kỹ năng xã hội và khả năng tư duy logic. Chúng tôi cung cấp các lớp học đa dạng bao gồm: vẽ tranh, đọc sách, thể dục, âm nhạc, nghệ thuật và nhiều hơn nữa. Những giáo viên có tâm huyết và kinh nghiệm sẽ cùng trẻ khám phá và học hỏi từ những trải nghiệm mới mẻ, giúp trẻ tự tin và vui vẻ hơn trong quá trình học tập.
+                    </p>
                     <ul class="list-inline m-0">
-                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Labore eos amet dolor amet diam</li>
-                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Diam dolor diam elitripsum vero.</li>
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Môi trường giáo dục thân thiện và an toàn</li>
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Giáo viên có tâm huyết và chuyên nghiệp</li>
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Chương trình giáo dục đa dạng và phù hợp</li>
                     </ul>
-                    <a href="" class="btn btn-primary mt-4 py-2 px-4">Book Now</a>
+                    <a href="" class="btn btn-primary mt-4 py-2 px-4">Đăng ký ngay</a>
                 </div>
                 <div class="col-lg-5">
                     <div class="card border-0">
                         <div class="card-header bg-secondary text-center p-4">
-                            <h1 class="text-white m-0">Book A Seat</h1>
+                            <h1 class="text-white m-0">Đăng Ký</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-primary p-5">
                             <form>
                                 <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                                    <input type="text" class="form-control border-0 p-4" placeholder="Họ và tên" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                                    <input type="email" class="form-control border-0 p-4" placeholder="Số điện thoại" required="required" />
                                 </div>
                                 <div class="form-group">
                                     <select class="custom-select border-0 px-4" style="height: 47px;">
-                                        <option selected>Select A Class</option>
+                                        <option selected>Chọn lớp</option>
                                         <option value="1">Class 1</option>
                                         <option value="2">Class 1</option>
                                         <option value="3">Class 1</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <button class="btn btn-secondary btn-block border-0 py-3" type="submit">Book Now</button>
+                                    <button class="btn btn-secondary btn-block border-0 py-3" type="submit">Đăng ký</button>
                                 </div>
                             </form>
                         </div>

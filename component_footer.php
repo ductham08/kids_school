@@ -7,15 +7,12 @@
                 <i class="flaticon-043-teddy-bear"></i>
                 <span class="text-white">KidKinder</span>
             </a>
-            <p>Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea dolor et magna dolor, elitr rebum duo
-                est sed diam elitr. Stet elitr stet diam duo eos rebum ipsum diam ipsum elitr.</p>
+            <p>
+                KidKinder là một nhà trẻ chuyên nghiệp và thân thiện với trẻ em, cung cấp môi trường học tập và phát triển đầy sáng tạo và an toàn cho các em nhỏ từ 6 tháng đến 5 tuổi. Với đội ngũ giáo viên giàu kinh nghiệm và các hoạt động giáo dục đa dạng, KidKinder là lựa chọn lý tưởng cho các bậc phụ huynh có nhu cầu chăm sóc và giáo dục cho con em mình.
+            </p>
             <div class="d-flex justify-content-start mt-4">
                 <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
                     style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-                    style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
                     style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
             </div>
@@ -25,21 +22,18 @@
             <div class="d-flex">
                 <h4 class="fa fa-map-marker-alt text-primary"></h4>
                 <div class="pl-3">
-                    <h5 class="text-white">Địa chỉ</h5>
                     <p>Mai Dịch, Cầu Giấy, Hà Nội</p>
                 </div>
             </div>
             <div class="d-flex">
                 <h4 class="fa fa-envelope text-primary"></h4>
                 <div class="pl-3">
-                    <h5 class="text-white">Email</h5>
                     <p>KidKinder@gmail.com</p>
                 </div>
             </div>
             <div class="d-flex">
                 <h4 class="fa fa-phone-alt text-primary"></h4>
                 <div class="pl-3">
-                    <h5 class="text-white">Điện thoại</h5>
                     <p>012 345 678</p>
                 </div>
             </div>
