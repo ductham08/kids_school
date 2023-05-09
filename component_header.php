@@ -2,7 +2,7 @@
     session_start();
     require ("./database/url.php");
 
-    if($_SESSION["user"]){
+    if(!empty($_SESSION["user"])){
         $href_info = "./signIn.php";
     } else {
         $href_info = "./signIn.php";
