@@ -1,3 +1,12 @@
+<?php
+require_once("../database/config.php");
+
+
+$action = empty($_GET['action']) ? "" : $_GET['action'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,24 +18,43 @@
 </head>
 <body>
     <div class="home">
-        <div class="col-1">
+        <div class="navBar">
             <?php require "./nav_bar.php" ?>
         </div>
-        <div class="content col-10">
-            <div class="total_all">
-                <div class="col-3">
-                    <b>Học viên</b>
-                    <p>985</p>
-                </div>
-                <div class="col-3">
-                    <b>Lớp Học</b>
-                    <p>985</p>
-                </div>
-                <div class="col-3">
-                    <b>Giáo Viên</b>
-                    <p>985</p>
-                </div>
-            </div>
+        <div class="content">
+            <?php
+
+                switch ($action) {
+                    case '':
+                        include "page/students.php";
+                        break;
+
+                    case 'students':
+                        include "page/students.php";
+                        break;
+
+                    case 'new-student':
+                        include "page/newStudent.php";
+                        break;
+
+                    case 'update-student':
+                        include "page/updateStudent.php";
+                        break;
+
+                    case 'remove-student':
+                        include "page/removeStudent.php";
+                        break;
+
+                    case 'room':
+                        include "page/room.php";
+                        break;
+                    
+                    default:
+                        # code...
+                        break;
+                }
+
+            ?>
         </div>
     </div>
 </body>

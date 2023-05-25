@@ -50,4 +50,102 @@
 }
 
 /* HOME START */
+
+.home{
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .navBar{
+    width: 12%;
+}
+
+.home .content{
+    width: 90%;
+    padding: 15px ;
+}
+
 /* HOME END */
+
+
+.navPage a{
+    color: black;
+    text-decoration: none;
+}
+
+/* STUDENT START */
+
+.studentPage .content a{
+    text-decoration: none;
+}
+
+.studentPage .content table{
+    width: 100%;
+}
+
+.studentPage .content table thead th{
+    background-color: gainsboro;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.studentPage .content table tbody td{
+    text-align: center;
+    padding: 5px 0px;
+    border-bottom: 1px solid gainsboro;
+}
+
+/* STUDENT END */
+
+/* NEW STUDENT START */
+
+.newStudent{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.newStudent .list table{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.newStudent .list table thead th{
+    padding: 5px 0px;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+.newStudent .list table tbody td{
+    text-align: center;
+    padding: 5px 0px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.newStudent .form{
+    margin-top: 15px;
+}
+
+.newStudent .form input,
+.newStudent .form select{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 10px;
+}
+
+.newStudent .form p{
+    margin: 10px 0px;
+}
+
+.newStudent .form button{
+    padding: 5px 35px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* NEW STUDENT END */

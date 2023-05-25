@@ -12,37 +12,31 @@ require "../database/url.php";
     <h3>Kidkinder</h3>
     <ul>
         <li>
-            <a href="#">
-                <i class="fas fa-chart-pie"></i>
-                Dashboard
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-home"></i>
-                Lớp Học
-            </a>
-        </li>
-        <li>
-            <a href="#">
+            <a href="./?action=students">
                 <i class="fas fa-user-graduate"></i>
                 Học Viên
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="?action=room">
+                <i class="fas fa-home"></i>
+                Lớp Học
+            </a>
+        </li>
+        <li>
+            <a href="?action=teacher">
                 <i class="fas fa-chalkboard-teacher"></i>
                 Giáo Viên
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="?action=news">
                 <i class="fas fa-newspaper"></i>
                 Bài Viết
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="?action=users">
                 <i class="fas fa-users"></i>
                 Người Dùng
             </a>
