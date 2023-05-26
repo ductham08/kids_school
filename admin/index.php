@@ -48,6 +48,18 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
                     case 'room':
                         include "page/room.php";
                         break;
+
+                    case 'new-room':
+                        include "page/newRoom.php";
+                        break;
+
+                    case 'update-class':
+                        include "page/updateRoom.php";
+                        break;
+
+                    case 'remove-class':
+                        include "page/removeClass.php";
+                        break;
                     
                     default:
                         # code...

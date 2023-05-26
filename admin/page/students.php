@@ -2,7 +2,7 @@
 
 $sqlGetStudents = "SELECT * FROM `students` JOIN class ON class.id_class = students.id_class";
 
-$dataStudents = executeQuery($sqlGetStudents, true);
+$dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($sqlGetStudents, true);
 
 ?>
 
