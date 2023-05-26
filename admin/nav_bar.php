@@ -30,7 +30,7 @@ require "../database/url.php";
             </a>
         </li>
         <li>
-            <a href="?action=news">
+            <a href="?action=blog">
                 <i class="fas fa-newspaper"></i>
                 Bài Viết
             </a>

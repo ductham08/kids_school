@@ -15,6 +15,7 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 
+    <script src="../ckeditor/ckeditor.js"></script>
 </head>
 <body>
     <div class="home">
@@ -60,6 +61,10 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
                     case 'remove-class':
                         include "page/removeClass.php";
                         break;
+
+                    case 'blog':
+                        include "page/blog.php";
+                        break;
                     
                     default:
                         # code...
@@ -69,5 +74,7 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
             ?>
         </div>
     </div>
+
+
 </body>
 </html>
