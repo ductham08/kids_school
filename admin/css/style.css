@@ -127,7 +127,8 @@
 }
 
 .newStudent .form input,
-.newStudent .form select{
+.newStudent .form select,
+.newStudent .form textarea{
     width: 100%;
     outline: none;
     border: none;

@@ -4,16 +4,17 @@ $sqlGetClass = "SELECT * FROM `class` ";
 $dataClass = executeQuery($sqlGetClass, true);
 
 if(isset($_POST['btnSubmit'])){
-    $student_name = $_POST['student_name'];
-    $phone_farther = $_POST['phone_farther'];
-    $phone_morther = $_POST['phone_morther'];
-    $birthday = $_POST['birthday'];
-    $id_class = empty($_POST['class']) ? "" : $_POST['class'];
-    $day_admission = $_POST['day_admission'];
+    $name_class = $_POST['name_class'];
+    $start_date = $_POST['start_date'];
+    $end_date = $_POST['end_date'];
+    $capacity = $_POST['capacity'];
+    $desc_class = $_POST['desc_class'];
+    $tuition = $_POST['tuition'];
 
-    $sqlNewStudent = "INSERT INTO `students`(`birthday`, `student_name`, `phone_farther`, `phone_morther`, `id_class`, `day_admission`) VALUES ('$birthday',' $student_name','$phone_farther','$phone_morther','$id_class','$day_admission')";
-    executeQuery($sqlNewStudent, true);
-    header("location: ?action");
+    $sqlNewClass = "INSERT INTO `class`(`name_class`, `start_date`, `end_date`, `tuition`, `capacity`, `desc_class`) VALUES ('$name_class',' $start_date','$end_date','$tuition','$capacity','$desc_class')";
+
+    executeQuery($sqlNewClass, true);
+    header("location: ?action=room");
 }
 
 
@@ -32,33 +33,28 @@ if(isset($_POST['btnSubmit'])){
         <div class="form col-8">
             <form action="" method="post">
                 <div class="itemForm">
-                    <p>Họ và tên:</p>
-                    <input required name="student_name" type="text">
+                    <p>Tên lớp học:</p>
+                    <input required name="name_class" type="text">
                 </div>
                 <div class="itemForm">
-                    <p>Số điện thoại bố:</p>
-                    <input required name="phone_farther" type="text">
+                    <p>Học phí dự kiến:</p>
+                    <input required name="tuition" type="number">
                 </div>
                 <div class="itemForm">
-                    <p>Số điện thoại mẹ:</p>
-                    <input required name="phone_morther" type="text">
+                    <p>Ngày bắt đầu:</p>
+                    <input required name="start_date" type="date">
                 </div>
                 <div class="itemForm">
-                    <p>Ngày tháng năm sinh:</p>
-                    <input required name="birthday" type="date">
+                    <p>Kết thúc dự kiến:</p>
+                    <input required name="end_date" type="date">
                 </div>
                 <div class="itemForm">
-                    <p>Lớp học:</p>
-                    <select name="class"  required>
-                        <option selected disabled  hidden>Chọn lớp học</option>
-                        <?php foreach ($dataClass as $key => $value): ?>
-                            <option value="<?= $value['id_class'] ?>"><?= $value["class_name"] ?></option>
-                        <?php endforeach ?>
-                    </select>
+                    <p>Số lượng học sinh dự kiến:</p>
+                    <input required name="capacity" type="number">
                 </div>
                 <div  class="itemForm">
-                    <p>Ngày nhập học:</p>
-                    <input required name="day_admission" type="date">
+                    <p>Nội dung lớp học:</p>
+                    <textarea  required name="desc_class" id="" cols="30" rows="10"></textarea>
                 </div>
                 <button name="btnSubmit" type="submit">Lưu</button>
             </form>
