@@ -1,3 +1,17 @@
+<?php
+
+require_once("./database/config.php");
+
+$sqlGetClass = "SELECT * FROM `class` ";
+$dataClass = empty(executeQuery($sqlGetClass, true)) ? [] : executeQuery($sqlGetClass, true);
+
+$sqlGetBlog = "SELECT * FROM `blog` WHERE publics = 1";
+$dataBlog = empty(executeQuery($sqlGetBlog, true)) ? [] : executeQuery($sqlGetBlog, true);
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +21,24 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
+    <style>
+        .contentBlog{
+            display: -webkit-box;
+            -webkit-line-clamp: 3;  /* số dòng hiển thị */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .titleBlog{
+            display: -webkit-box;
+            -webkit-line-clamp: 1;  /* số dòng hiển thị */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top:10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -152,90 +184,36 @@
                 <h1 class="mb-4">Lớp học cho bé</h1>
             </div>
             <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
-                        <div class="card-body text-center">
-                            <h4 class="card-title">Lớp vẽ</h4>
-                            <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
+                <?php foreach ($dataClass as $key => $value): ?>
+                    <div class="col-lg-4 mb-5">
+                        <div class="card border-0 bg-light shadow-sm pb-2">
+                            <img class="card-img-top mb-2" src="./admin/page/image_upload/<?= $value['images'] ?>" alt="">
+                            <div class="card-body text-center">
+                                <h4 class="card-title"><?= $value['class_name'] ?></h4>
+                                <p class="card-text"><?= $value['desc_class'] ?></p>
+                            </div>
+                            <div class="card-footer bg-transparent py-4 px-5">
+                                <div class="row border-bottom">
+                                    <div class="col-6 py-1 text-right border-right"><strong>Số lượng</strong></div>
+                                    <div class="col-6 py-1"><?= $value['capacity'] ?> Trẻ</div>
+                                </div>
+                                <div class="row border-bottom">
+                                    <div class="col-6 py-1 text-right border-right"><strong>Bắt đầu từ</strong></div>
+                                    <div class="col-6 py-1"><?= $value['start_date'] ?></div>
+                                </div>
+                                <div class="row border-bottom">
+                                    <div class="col-6 py-1 text-right border-right"><strong>Độ tuổi</strong></div>
+                                    <div class="col-6 py-1"><?=  $value['age'] ?></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 py-1 text-right border-right"><strong>Học phí</strong></div>
+                                    <div class="col-6 py-1"><?= number_format($value['tuition'], 0, ',', '.') ?>đ</div>
+                                </div>
+                            </div>
+                            <a href="" class="btn btn-primary px-4 mx-auto mb-4">Đăng ký</a>
                         </div>
-                        <div class="card-footer bg-transparent py-4 px-5">
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Độ tuổi</strong></div>
-                                <div class="col-6 py-1">3 - 6 Tuổi</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Số lượng</strong></div>
-                                <div class="col-6 py-1">40 Trẻ</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Thời gian</strong></div>
-                                <div class="col-6 py-1">08:00 - 10:00</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 py-1 text-right border-right"><strong>Học phí</strong></div>
-                                <div class="col-6 py-1">3.500.000đ</div>
-                            </div>
-                        </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Đăng ký</a>
                     </div>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
-                        <div class="card-body text-center">
-                            <h4 class="card-title">Lớp vẽ</h4>
-                            <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
-                        </div>
-                        <div class="card-footer bg-transparent py-4 px-5">
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Độ tuổi</strong></div>
-                                <div class="col-6 py-1">3 - 6 Tuổi</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Số lượng</strong></div>
-                                <div class="col-6 py-1">40 Trẻ</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Thời gian</strong></div>
-                                <div class="col-6 py-1">08:00 - 10:00</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 py-1 text-right border-right"><strong>Học phí</strong></div>
-                                <div class="col-6 py-1">3.500.000đ</div>
-                            </div>
-                        </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Đăng ký</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
-                        <div class="card-body text-center">
-                            <h4 class="card-title">Lớp vẽ</h4>
-                            <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
-                        </div>
-                        <div class="card-footer bg-transparent py-4 px-5">
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Độ tuổi</strong></div>
-                                <div class="col-6 py-1">3 - 6 Tuổi</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Số lượng</strong></div>
-                                <div class="col-6 py-1">40 Trẻ</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right"><strong>Thời gian</strong></div>
-                                <div class="col-6 py-1">08:00 - 10:00</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 py-1 text-right border-right"><strong>Học phí</strong></div>
-                                <div class="col-6 py-1">3.500.000đ</div>
-                            </div>
-                        </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Đăng ký</a>
-                    </div>
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>
@@ -370,126 +348,26 @@
     </div>
     <!-- Team End -->
 
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container p-0">
-            <div class="text-center pb-2">
-                <p class="section-title px-5"><span class="px-2">Testimonial</span></p>
-                <h1 class="mb-4">What Parents Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item px-3">
-                    <div class="bg-light shadow-sm rounded mb-4 p-4">
-                        <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-1.jpg" style="width: 70px; height: 70px;" alt="Image">
-                        <div class="pl-3">
-                            <h5>Parent Name</h5>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item px-3">
-                    <div class="bg-light shadow-sm rounded mb-4 p-4">
-                        <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-2.jpg" style="width: 70px; height: 70px;" alt="Image">
-                        <div class="pl-3">
-                            <h5>Parent Name</h5>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item px-3">
-                    <div class="bg-light shadow-sm rounded mb-4 p-4">
-                        <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-3.jpg" style="width: 70px; height: 70px;" alt="Image">
-                        <div class="pl-3">
-                            <h5>Parent Name</h5>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item px-3">
-                    <div class="bg-light shadow-sm rounded mb-4 p-4">
-                        <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle" src="img/testimonial-4.jpg" style="width: 70px; height: 70px;" alt="Image">
-                        <div class="pl-3">
-                            <h5>Parent Name</h5>
-                            <i>Profession</i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
     <!-- Blog Start -->
     <div class="container-fluid pt-5">
         <div class="container">
             <div class="text-center pb-2">
-                <p class="section-title px-5"><span class="px-2">Latest Blog</span></p>
-                <h1 class="mb-4">Latest Articles From Blog</h1>
+                <p class="section-title px-5"><span class="px-2">Blog</span></p>
             </div>
             <div class="row pb-3">
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0 shadow-sm mb-2">
-                        <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="">
-                        <div class="card-body bg-light text-center p-4">
-                            <h4 class="">Diam amet eos at no eos</h4>
-                            <div class="d-flex justify-content-center mb-3">
-                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
-                                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
-                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+                <?php foreach ($dataBlog as $key => $value): ?>
+                    <div class="col-lg-4 mb-4">
+                        <div class="card border-0 shadow-sm mb-2">
+                            <img class="card-img-top mb-2" src="./admin/page/image_upload/<?= $value['thumnail'] ?>" alt="">
+                            <div class="card-body bg-light text-center p-4">
+                                    <a class="titleBlog" href="./detailBlog.php?id=<?= $value['id'] ?>" ><h4 ><?= $value['title'] ?></h4></a>
+                                <div class="contentBlog">
+                                    <?= $value['sort_content'] ?>
+                                </div>
                             </div>
-                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
-                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0 shadow-sm mb-2">
-                        <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="">
-                        <div class="card-body bg-light text-center p-4">
-                            <h4 class="">Diam amet eos at no eos</h4>
-                            <div class="d-flex justify-content-center mb-3">
-                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
-                                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
-                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
-                            </div>
-                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
-                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0 shadow-sm mb-2">
-                        <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="">
-                        <div class="card-body bg-light text-center p-4">
-                            <h4 class="">Diam amet eos at no eos</h4>
-                            <div class="d-flex justify-content-center mb-3">
-                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
-                                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
-                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
-                            </div>
-                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
-                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>

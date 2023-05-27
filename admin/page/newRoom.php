@@ -10,6 +10,7 @@ if(isset($_POST['btnSubmit'])){
     $capacity = $_POST['capacity'];
     $desc_class = $_POST['desc_class'];
     $tuition = $_POST['tuition'];
+    $age = $_POST['age'];
 
     $url = "\image_upload/";
     $nameIMG = '';
@@ -26,7 +27,7 @@ if(isset($_POST['btnSubmit'])){
         }
     }
 
-    $sqlNewClass = "INSERT INTO `class`(`class_name`, `start_date`, `end_date`, `tuition`, `desc_class`, `capacity`,  `images`) VALUES ('$name_class','$start_date','$end_date','$tuition','$desc_class','$capacity', '$nameIMG')";
+    $sqlNewClass = "INSERT INTO `class`(`class_name`, `start_date`, `end_date`, `tuition`, `desc_class`, `capacity`,  `images`, `age`) VALUES ('$name_class','$start_date','$end_date','$tuition','$desc_class','$capacity', '$nameIMG', ' $age')";
 
     executeQuery($sqlNewClass, true);
     header("location: ?action=room");
@@ -58,6 +59,10 @@ if(isset($_POST['btnSubmit'])){
                 <div class="itemForm">
                     <p>Ngày bắt đầu:</p>
                     <input required name="start_date" type="date">
+                </div>
+                <div class="itemForm">
+                    <p>Độ tuổi:</p>
+                    <input required name="age" type="text">
                 </div>
                 <div class="itemForm">
                     <p>Kết thúc dự kiến:</p>

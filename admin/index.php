@@ -65,6 +65,10 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
                     case 'blog':
                         include "page/blog.php";
                         break;
+
+                    case 'new-blog':
+                        include "page/newBlog.php";
+                        break;
                     
                     default:
                         # code...

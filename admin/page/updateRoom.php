@@ -12,6 +12,7 @@ if(isset($_POST['btnSubmit'])){
     $capacity = $_POST['capacity'];
     $desc_class = $_POST['desc_class'];
     $tuition = $_POST['tuition'];
+    $age = $_POST['age'];
 
     $url = "\image_upload/";
     $nameIMG = '';
@@ -28,7 +29,7 @@ if(isset($_POST['btnSubmit'])){
         }
     }
 
-    $sqlUpdateClass = "UPDATE `class` SET `class_name`='$name_class',`start_date`='$start_date',`end_date`='$end_date',`tuition`='$tuition',`desc_class`='$desc_class',`capacity`='$capacity' WHERE  id_class = $idClass";
+    $sqlUpdateClass = "UPDATE `class` SET `class_name`='$name_class',`start_date`='$start_date',`end_date`='$end_date',`tuition`='$tuition',`desc_class`='$desc_class',`capacity`='$capacity' , 'age'='$age' WHERE  id_class = $idClass";
 
     executeQuery($sqlUpdateClass, true);
     header("location: ?action=room");
@@ -55,6 +56,10 @@ if(isset($_POST['btnSubmit'])){
                 <div class="itemForm">
                     <p>Học phí dự kiến:</p>
                     <input required name="tuition" value="<?= $dataClass['tuition'] ?>" type="number">
+                </div>
+                <div class="itemForm">
+                    <p>Độ tuổi:</p>
+                    <input required name="age" type="text">
                 </div>
                 <div class="itemForm">
                     <p>Ngày bắt đầu:</p>
