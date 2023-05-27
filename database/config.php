@@ -3,9 +3,11 @@
     function getConnect(){
 
         $host = "localhost";
-        $dbname = "kidsschool";
+        $dbname = "kisdschool";
+        // $dbname = "kidsschool";
         $dbusername = "root";
-        $dbpwd = "";
+        // $dbpwd = "";
+        $dbpwd = "123456";
 
         try {
             $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $dbusername, $dbpwd);
