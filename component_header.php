@@ -24,11 +24,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav font-weight-bold mx-auto py-0">
                 <a href="index.php" class="nav-item nav-link">Trang Chủ</a>
-                <a href="about.php" class="nav-item nav-link">Về Chúng Mình</a>
-                <a href="class.php" class="nav-item nav-link">Lớp Học</a>
-                <a href="team.php" class="nav-item nav-link">Giáo Viên</a>
-                <a href="blog.php" class="nav-item nav-link">Bài Viết</a>
-                <a href="single.php" class="nav-item nav-link">Chi Tiết Bài Viết</a>
+                <a href="blog.php" class="nav-item nav-link">Blog</a>
                 <a href="contact.php" class="nav-item nav-link">Liên Hệ</a>
             </div>
             <a href="<?= $href_info ?>">

@@ -168,7 +168,6 @@ $dataBlog = empty(executeQuery($sqlGetBlog, true)) ? [] : executeQuery($sqlGetBl
                             </ul>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Xem thêm</a>
                 </div>
             </div>
         </div>
@@ -210,7 +209,6 @@ $dataBlog = empty(executeQuery($sqlGetBlog, true)) ? [] : executeQuery($sqlGetBl
                                     <div class="col-6 py-1"><?= number_format($value['tuition'], 0, ',', '.') ?>đ</div>
                                 </div>
                             </div>
-                            <a href="" class="btn btn-primary px-4 mx-auto mb-4">Đăng ký</a>
                         </div>
                     </div>
                 <?php endforeach ?>
@@ -248,14 +246,17 @@ $dataBlog = empty(executeQuery($sqlGetBlog, true)) ? [] : executeQuery($sqlGetBl
                                     <input type="text" class="form-control border-0 p-4" placeholder="Họ và tên" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control border-0 p-4" placeholder="Số điện thoại" required="required" />
+                                    <input type="text" class="form-control border-0 p-4" placeholder="Số điện thoại" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <select class="custom-select border-0 px-4" style="height: 47px;">
-                                        <option selected>Chọn lớp</option>
-                                        <option value="1">Class 1</option>
-                                        <option value="2">Class 1</option>
-                                        <option value="3">Class 1</option>
+                                    <input type="email" class="form-control border-0 p-4" placeholder="Email" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <select name="class_id" class="custom-select border-0 px-4" style="height: 47px;">
+
+                                        <?php foreach ($dataClass as $key => $value): ?>
+                                            <option value="<?= $value['id_class'] ?>"><?= $value['class_name'] ?></option>
+                                        <?php endforeach ?>
                                     </select>
                                 </div>
                                 <div>
@@ -360,7 +361,7 @@ $dataBlog = empty(executeQuery($sqlGetBlog, true)) ? [] : executeQuery($sqlGetBl
                         <div class="card border-0 shadow-sm mb-2">
                             <img class="card-img-top mb-2" src="./admin/page/image_upload/<?= $value['thumnail'] ?>" alt="">
                             <div class="card-body bg-light text-center p-4">
-                                    <a class="titleBlog" href="./detailBlog.php?id=<?= $value['id'] ?>" ><h4 ><?= $value['title'] ?></h4></a>
+                                <a class="titleBlog" href="./detailBlog.php?id=<?= $value['id'] ?>" ><h5 ><?= $value['title'] ?></h5></a>
                                 <div class="contentBlog">
                                     <?= $value['sort_content'] ?>
                                 </div>

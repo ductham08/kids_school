@@ -26,13 +26,13 @@ require "../database/url.php";
         <li>
             <a href="?action=teacher">
                 <i class="fas fa-chalkboard-teacher"></i>
-                Giáo Viên
+                Giáo viên
             </a>
         </li>
         <li>
             <a href="?action=blog">
                 <i class="fas fa-newspaper"></i>
-                Bài Viết
+                Lịch giảng dạy
             </a>
         </li>
         <li>
