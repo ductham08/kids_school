@@ -20,6 +20,17 @@ if(isset($_POST['btnSubmit'])){
     header("location: ?action");
 }
 
+function sex($number){
+    if ($number == 1) {
+        return "Nam";
+    } else if ($number == 2) {
+        return "Nữ";
+    } else {
+        return "Khác";
+    }
+    
+}
+
 
 ?>
 
@@ -30,51 +41,44 @@ if(isset($_POST['btnSubmit'])){
     <a href=""><i>Cập nhật thông tin học sinh</i></a>
 </p>
 <div class="newStudent">
-    <div class="col-5 add">
+    <div class="col-12 add">
         <b>Thông tin cần chỉnh sửa</b>
-        <div class="form col-8">
+        <hr>
+        <div class="form col-12">
             <form action="" method="post">
-                <div class="itemForm">
-                    <p>Họ và tên:</p>
-                    <input required name="student_name" value="<?= $dataStudent['student_name'] ?>" type="text">
+                <div class="col-6">
+                    <div class="itemForm">
+                        <p>Họ và tên:</p>
+                        <input required name="student_name" value="<?= $dataStudent['student_name'] ?>" type="text">
+                    </div>
+                    <div class="itemForm">
+                        <p>Số điện thoại bố:</p>
+                        <input required name="phone_farther" value="<?= $dataStudent['phone_farther'] ?>" type="text">
+                    </div>
+                    <div class="itemForm">
+                        <p>Số điện thoại mẹ:</p>
+                        <input required name="phone_morther" value="<?= $dataStudent['phone_morther'] ?>" type="text">
+                    </div>
+                    <div class="itemForm">
+                        <p>Ngày tháng năm sinh:</p>
+                        <input value="<?= $dataStudent['birthday'] ?>" required name="birthday" type="date">
+                    </div>
+                    <div class="itemForm">
+                        <p>Lớp học:</p>
+                        <select name="class"  required>
+                            <option selected disabled  hidden>Chọn ca</option>
+                            <?php foreach ($dataClass as $key => $value): ?>
+                                <option selected = "<? $value['id_class'] == $dataStudent['id_class'] ? true : false ?>" value="<?= $value['id_class'] ?>"><?= $value["class_name"] ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                    <div  class="itemForm">
+                        <p>Ngày nhập học:</p>
+                        <input required name="day_admission" value="<?= $dataStudent['day_admission'] ?>" type="date">
+                    </div>
                 </div>
-                <div class="itemForm">
-                    <p>Số điện thoại bố:</p>
-                    <input required name="phone_farther" value="<?= $dataStudent['phone_farther'] ?>" type="text">
-                </div>
-                <div class="itemForm">
-                    <p>Số điện thoại mẹ:</p>
-                    <input required name="phone_morther" value="<?= $dataStudent['phone_morther'] ?>" type="text">
-                </div>
-                <div class="itemForm">
-                    <p>Ngày tháng năm sinh:</p>
-                    <input value="<?= $dataStudent['birthday'] ?>" required name="birthday" type="date">
-                </div>
-                <div class="itemForm">
-                    <p>Lớp học:</p>
-                    <select name="class"  required>
-                        <option selected disabled  hidden>Chọn lớp học</option>
-                        <?php foreach ($dataClass as $key => $value): ?>
-                            <option selected = "<? $value['id_class'] == $dataStudent['id_class'] ? true : false ?>" value="<?= $value['id_class'] ?>"><?= $value["class_name"] ?></option>
-                        <?php endforeach ?>
-                    </select>
-                </div>
-                <div  class="itemForm">
-                    <p>Ngày nhập học:</p>
-                    <input required name="day_admission" value="<?= $dataStudent['day_admission'] ?>" type="date">
-                </div>
-                <button name="btnSubmit" type="submit">Lưu</button>
+                <button name="btnSubmit" type="submit">Lưu thông tin</button>
             </form>
         </div>
-    </div>
-    <div class="col-7 list" >
-        <b>Thông tin học sinh</b>
-        <hr>
-            <p>Học sinh <b><i><?= $dataStudent['student_name'] ?>!</i></b></p>
-            <p>Ngày sinh: <i><?= $dataStudent['birthday'] ?></i></p>
-            <p>Học sinh lớp: <i><?= $dataStudent['class_name'] ?></i></p>
-            <p>Số điện thoại bố: <i><?= $dataStudent['phone_farther'] ?></i></p>
-            <p>Số điện thoại mẹ: <i><?= $dataStudent['phone_morther'] ?></i></p>
-            <p>Ngày nhập học: <i><?= $dataStudent['day_admission'] ?></i></p>
     </div>
 </div>

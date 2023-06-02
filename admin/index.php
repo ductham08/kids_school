@@ -13,7 +13,7 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Quản Lý</title>
 
     <script src="../ckeditor/ckeditor.js"></script>
 </head>
@@ -62,12 +62,20 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
                         include "page/removeClass.php";
                         break;
 
-                    case 'blog':
-                        include "page/blog.php";
+                    case 'teacher':
+                        include "page/teachers.php";
                         break;
 
-                    case 'new-blog':
-                        include "page/newBlog.php";
+                    case 'new-teacher':
+                        include "page/newTeacher.php";
+                        break;
+
+                    case 'shift':
+                        include "page/shift.php";
+                        break;
+
+                    case 'new-shift':
+                        include "page/newShift.php";
                         break;
                     
                     default:

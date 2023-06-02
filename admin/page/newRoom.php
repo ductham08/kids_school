@@ -8,7 +8,7 @@ if(isset($_POST['btnSubmit'])){
     $start_date = $_POST['start_date'];
     $end_date = $_POST['end_date'];
     $capacity = $_POST['capacity'];
-    $desc_class = $_POST['desc_class'];
+    $desc_class = $_POST['post_content'];
     $tuition = $_POST['tuition'];
     $age = $_POST['age'];
 
@@ -44,10 +44,11 @@ if(isset($_POST['btnSubmit'])){
     <a href=""><i>Thêm mới lớp học</i></a>
 </p>
 <div class="newStudent">
-    <div class="col-5 add">
+    <div class="col-12 add">
         <b>Thông tin cần thêm</b>
-        <div class="form col-8">
+        <div class="form">
             <form method="POST" enctype="multipart/form-data">
+                <div class="col-5">
                 <div class="itemForm">
                     <p>Tên lớp học:</p>
                     <input required name="name_class" type="text">
@@ -76,40 +77,17 @@ if(isset($_POST['btnSubmit'])){
                     <p>Hình ảnh:</p>
                     <input style="border: none" type="file" name="imagess" id="file" class="inputfile" />
                 </div>
+                </div>
                 <div  class="itemForm">
                     <p>Nội dung lớp học:</p>
-                    <textarea  required name="desc_class" id="" cols="30" rows="10"></textarea>
+                    <textarea rows="10" required name="post_content" id="post_content" ></textarea>
                 </div>
-                <button name="btnSubmit" type="submit">Lưu</button>
+                <button name="btnSubmit" type="submit">Lưu thông tin</button>
             </form>
         </div>
     </div>
-    <div class="col-7 list">
-        <b>Danh sách lớp hiện có</b>
-        <table>
-            
-            <thead>
-                <tr>
-                    <th>Tên lớp</th>
-                    <th>Ngày bắt đầu</th>
-                    <th>Ngày kết thúc</th>
-                    <th>Học phí</th>
-                    <th>Quy mô lớp</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php foreach ($dataClass as $key => $value): ?>
-                <tr>
-                    <td><?= $value['class_name'] ?></td>
-                    <td><?= $value['start_date'] ?></td>
-                    <td><?= $value['end_date'] ?></td>
-                    <td><?= number_format($value['tuition'], 0, ',', '.') ?>đ</td>
-                    <td><?= $value['capacity'] ?></td>
-                </tr>
-                <?php endforeach ?>
-            </tbody>
-
-        </table>
-    </div>
 </div>
+
+<script>
+    CKEDITOR.replace( 'post_content' );
+</script>

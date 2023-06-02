@@ -20,11 +20,11 @@ $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($
             <thead>
                 <tr>
                     <th>STT</th>
+                    <th>Mã học sinh</th>
                     <th>Họ và tên</th>
                     <th>Số liên lạc của Bố</th>
                     <th>Số liên lạc của Mẹ</th>
-                    <th>Ngày/ tháng/ năm sinh</th>
-                    <th>Ngày nhập học</th>
+                    <th>Ngày sinh</th>
                     <th>Lớp học</th>
                     <th colspan="2">
                         <a href="?action=new-student">Thêm sinh viên</a>
@@ -36,11 +36,11 @@ $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($
                 <?php foreach ($dataStudents as $key => $value): ?>
                 <tr>
                     <td><?= $key ?></td>
+                    <td><?= $value['student_code'] ?></td>
                     <td><?= $value['student_name'] ?></td>
                     <td><?= $value['phone_farther'] ?></td>
                     <td><?= $value['phone_morther'] ?></td>
                     <td><?= $value['birthday'] ?></td>
-                    <td><?= $value['day_admission'] ?></td>
                     <td><?= $value['class_name'] ?></td>
                     <td>
                         <a href="?action=update-student&id=<?= $value['id_student'] ?>">Cập nhật</a>

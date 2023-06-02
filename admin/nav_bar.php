@@ -36,6 +36,12 @@ require "../database/url.php";
             </a>
         </li>
         <li>
+            <a href="?action=shift">
+                <i class="fas fa-newspaper"></i>
+                Ca giảng dạy
+            </a>
+        </li>
+        <li>
             <a href="?action=users">
                 <i class="fas fa-users"></i>
                 Người Dùng
