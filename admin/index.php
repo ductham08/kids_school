@@ -33,6 +33,18 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
                     case 'students':
                         include "page/students.php";
                         break;
+                        
+                    case 'register-students':
+                        include "page/studentRegister.php";
+                        break;
+
+                    case 'register-status':
+                        include "page/updateStatus.php";
+                        break;
+
+                    case 'export':
+                        include "page/export.php";
+                        break;
 
                     case 'new-student':
                         include "page/newStudent.php";

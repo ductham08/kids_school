@@ -20,12 +20,19 @@ if(isset($_POST['btnSubmit'])){
     $father_name = $_POST['father_name'];
     $morther_name = $_POST['morther_name'];
 
-    $sqlNewStudent = "INSERT INTO `students`(`birthday`, `student_name`, `phone_farther`, `phone_morther`, `id_class`, `student_code`, `sex`, `father_name`,`morther_name`,`tuition status`) VALUES ('$birthday',' $student_name','$phone_farther','$phone_morther','$id_class','$student_code', '$sex', '$father_name', '$morther_name', 0)";
+    $sqlNewStudent = "INSERT INTO `students`(`birthday`, `student_name`, `phone_farther`, `phone_morther`, `id_class`, `student_code`, `sex`, `father_name`,`morther_name`,`tuition_status`) VALUES ('$birthday',' $student_name','$phone_farther','$phone_morther','$id_class','$student_code', '$sex', '$father_name', '$morther_name', 0)";
+
+    $sqlGetClass = "SELECT * FROM `class` WHERE id_class = $id_class";
+    $dataClass = executeQuery($sqlGetClass, false);
+    
+    $current_number = $dataClass['current_number'] + 1;
+    
+    $sqlUpdateClass = "UPDATE `class` SET `current_number` = $current_number WHERE id_class = $id_class";
+    executeQuery($sqlUpdateClass, false);
     
     executeQuery($sqlNewStudent, true);
     header("location: ?action");
 }
-
 
 
 ?>

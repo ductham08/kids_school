@@ -11,7 +11,7 @@ $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($
     <p class="navPage">
         <a href=""><i>Trang Chủ</i></a> 
         <i>/</i>
-        <a href=""><i>Danh sách học sinh</i></a>
+        <a href=""><i>Danh sách người dùng</i></a>
     </p>
 
     <div class="content">
@@ -20,9 +20,7 @@ $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($
             <thead>
                 <tr>
                     <th>STT</th>
-                    <th>Mã học sinh</th>
                     <th>Họ và tên</th>
-                    <th>Số liên lạc của Bố</th>
                     <th>Số liên lạc của Mẹ</th>
                     <th>Ngày sinh</th>
                     <th>Lớp học</th>

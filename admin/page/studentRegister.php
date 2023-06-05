@@ -1,6 +1,6 @@
 <?php
 
-$sqlGetStudents = "SELECT * FROM `students` JOIN class ON class.id_class = students.id_class WHERE tuition_status = 1";
+$sqlGetStudents = "SELECT * FROM `students` JOIN class ON class.id_class = students.id_class WHERE tuition_status = 0";
 
 $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($sqlGetStudents, true);
 
@@ -26,8 +26,9 @@ $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($
                     <th>Số liên lạc của Mẹ</th>
                     <th>Ngày sinh</th>
                     <th>Lớp học</th>
-                    <th colspan="2">
-                        <a href="?action=new-student">Thêm sinh viên</a>
+                    <th>Học phí</th>
+                    <th colspan="3">
+                        Thao tác
                     </th>
                 </tr>
             </thead>
@@ -43,10 +44,18 @@ $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($
                     <td><?= $value['birthday'] ?></td>
                     <td><?= $value['class_name'] ?></td>
                     <td>
+                        <button>
+                            <a href="?action=register-status&id=<?= $value['student_code'] ?>">Hoàn thành</a>
+                        </button>
+                    </td>
+                    <td>
                         <a href="?action=update-student&id=<?= $value['id_student'] ?>">Cập nhật</a>
                     </td>
                     <td>
                         <a href="?action=remove-student&id=<?= $value['id_student'] ?>">Xóa bỏ</a>
+                    </td>
+                    <td>
+                        <a href="?action=export&id=<?= $value['student_code'] ?>">Xuất hóa đơn</a>
                     </td>
                 </tr>
                 <?php endforeach ?>

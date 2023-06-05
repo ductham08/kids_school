@@ -18,6 +18,12 @@ require "../database/url.php";
             </a>
         </li>
         <li>
+            <a href="./?action=register-students">
+                <i class="fas fa-user-graduate"></i>
+                Danh Sách Đăng Ký
+            </a>
+        </li>
+        <li>
             <a href="?action=room">
                 <i class="fas fa-home"></i>
                 Lớp Học
@@ -27,12 +33,6 @@ require "../database/url.php";
             <a href="?action=teacher">
                 <i class="fas fa-chalkboard-teacher"></i>
                 Giáo viên
-            </a>
-        </li>
-        <li>
-            <a href="?action=blog">
-                <i class="fas fa-newspaper"></i>
-                Lịch giảng dạy
             </a>
         </li>
         <li>
