@@ -98,6 +98,10 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
                         include "page/user.php";
                         break;
 
+                    case 'role':
+                        include "page/updateRole.php";
+                        break;
+
                     case 'new-shift':
                         include "page/newShift.php";
                         break;

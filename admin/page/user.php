@@ -1,11 +1,38 @@
 <?php
 
-$sqlGetStudents = "SELECT * FROM `user`";
+$sqlGetStudents = "SELECT * FROM `users`";
 
 $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($sqlGetStudents, true);
 
+function checkRole($role){
+    switch ($role) {
+        case '1':
+            return "Admin";
+            break;
+
+        case '2':
+            return "Giáo viên";
+            break;
+
+        case '3':
+            return "NV tài chính";
+            break;
+        
+        default:
+            return "Người dùng";
+            break;
+    }
+}
 
 ?>
+
+<style>
+    td button{
+        padding: 0px 5px;
+        box-shadow: 0px 0px 3px black;
+        border-radius: 6px;
+    }
+</style>
 
 
 <div class="studentPage">
@@ -22,12 +49,10 @@ $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($
                 <tr>
                     <th>STT</th>
                     <th>Họ và tên</th>
-                    <th>Số điện thoại</th>
+                    <th>Chức năng</th>
                     <th>Email</th>
                     <th>Phân quyền</th>
-                    <th colspan="2">
-                        Hành động
-                    </th>
+                    <th>Hành động</th>
                 </tr>
             </thead>
 
@@ -35,14 +60,14 @@ $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($
                 <?php foreach ($dataStudents as $key => $value): ?>
                 <tr>
                     <td><?= $key ?></td>
-                    <td><?= $value['student_code'] ?></td>
-                    <td><?= $value['student_name'] ?></td>
-                    <td><?= $value['phone_farther'] ?></td>
-                    <td><?= $value['phone_morther'] ?></td>
-                    <td><?= $value['birthday'] ?></td>
-                    <td><?= $value['class_name'] ?></td>
+                    <td><?= $value['name'] ?></td>
+                    <td><?= checkRole($value['role']) ?></td>
+                    <td><?= $value['mail'] ?></td>
                     <td>
-                        <a href="?action=update-student&id=<?= $value['id_student'] ?>">Cập nhật</a>
+                        <button><a href="?action=role&id=<?= $value['id'] ?>&role=1">Admin</a></button>
+                        <button><a href="?action=role&id=<?= $value['id'] ?>&role=2">Giáo viên</a></button>
+                        <button><a href="?action=role&id=<?= $value['id'] ?>&role=3">Học vụ</a></button>
+                        <button><a href="?action=role&id=<?= $value['id'] ?>&role=0">Kế hoạch</a></button>
                     </td>
                     <td>
                         <a href="?action=remove-student&id=<?= $value['id_student'] ?>">Xóa bỏ</a>

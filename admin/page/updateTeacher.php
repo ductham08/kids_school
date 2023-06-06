@@ -30,8 +30,6 @@ if(isset($_POST['btnSubmit'])){
     header("location: ?action=teacher");
 }
 
-
-
 ?>
 
 <style>
