@@ -82,8 +82,20 @@ $action = empty($_GET['action']) ? "" : $_GET['action'];
                         include "page/newTeacher.php";
                         break;
 
+                    case 'update-teacher':
+                        include "page/updateTeacher.php";
+                        break;
+
                     case 'shift':
                         include "page/shift.php";
+                        break;
+
+                    case 'remove-shift':
+                        include "page/removeShift.php";
+                        break;
+
+                    case 'users':
+                        include "page/user.php";
                         break;
 
                     case 'new-shift':

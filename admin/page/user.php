@@ -1,8 +1,9 @@
 <?php
 
-$sqlGetStudents = "SELECT * FROM `students` JOIN class ON class.id_class = students.id_class WHERE tuition_status = 1";
+$sqlGetStudents = "SELECT * FROM `user`";
 
 $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($sqlGetStudents, true);
+
 
 ?>
 
@@ -21,11 +22,11 @@ $dataStudents = empty(executeQuery($sqlGetStudents, true)) ? [] : executeQuery($
                 <tr>
                     <th>STT</th>
                     <th>Họ và tên</th>
-                    <th>Số liên lạc của Mẹ</th>
-                    <th>Ngày sinh</th>
-                    <th>Lớp học</th>
+                    <th>Số điện thoại</th>
+                    <th>Email</th>
+                    <th>Phân quyền</th>
                     <th colspan="2">
-                        <a href="?action=new-student">Thêm sinh viên</a>
+                        Hành động
                     </th>
                 </tr>
             </thead>

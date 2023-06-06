@@ -1,3 +1,43 @@
+<?php
+
+// if(isset($_POST['btnSubmit'])){ 
+
+//     $name = $_POST['user_name'];
+//     $email = $_POST['user_email'];
+//     $pass = $_POST['password'];
+//     $repass = $_POST['repassword'];
+
+//     $errMail = "";
+//     $errPass = "";
+
+//     $sqlFindUser = "SELECT * FROM users WHERE mail = '$email'";
+//     $user = executeQuery($sqlFindUser, true);
+
+//     if($user){
+//         return $errMail = "Email đã tồn tại trong hệ thống!";
+//     } else {
+//         if($pass !== $repass || $repass == ""){
+//             return $errPass = "Mật khẩu xác nhận không chính xác!";
+//         } else {
+
+//             $passHasd = md5($pass);
+
+//             $sqlAddUser = "INSERT INTO `users`(`name`, `mail`, `password`,  `role`) VALUES ('$name','$email', '$passHasd', 0 )";
+//             $newUser = executeQuery($sqlFindUser, true);
+//             if($newUser) {
+//                 return $success = "Đăng ký tài khoản thành công!";
+//             }
+//         }
+//     }
+
+
+
+// }
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +47,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
+    <style>
+        input{
+            outline: none
+        }
+    </style>
 </head>
 
 
