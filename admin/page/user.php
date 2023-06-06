@@ -62,15 +62,16 @@ function checkRole($role){
                     <td><?= $key ?></td>
                     <td><?= $value['name'] ?></td>
                     <td><?= checkRole($value['role']) ?></td>
-                    <td><?= $value['mail'] ?></td>
+                    <td><?= $value['email'] ?></td>
                     <td>
                         <button><a href="?action=role&id=<?= $value['id'] ?>&role=1">Admin</a></button>
                         <button><a href="?action=role&id=<?= $value['id'] ?>&role=2">Giáo viên</a></button>
                         <button><a href="?action=role&id=<?= $value['id'] ?>&role=3">Học vụ</a></button>
-                        <button><a href="?action=role&id=<?= $value['id'] ?>&role=0">Kế hoạch</a></button>
+                        <button><a href="?action=role&id=<?= $value['id'] ?>&role=4">Kế hoạch</a></button>
+                        <button><a href="?action=role&id=<?= $value['id'] ?>&role=0">Người dùng</a></button>
                     </td>
                     <td>
-                        <a href="?action=remove-student&id=<?= $value['id_student'] ?>">Xóa bỏ</a>
+                        <a href="?action=remove-student&id=<?= $value['id'] ?>">Xóa bỏ</a>
                     </td>
                 </tr>
                 <?php endforeach ?>

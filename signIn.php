@@ -1,39 +1,51 @@
 <?php
+    require_once("./database/config.php");
 
-// if(isset($_POST['btnSubmit'])){ 
+    $mail = "";
+    $password = "";
 
-//     $name = $_POST['user_name'];
-//     $email = $_POST['user_email'];
-//     $pass = $_POST['password'];
-//     $repass = $_POST['repassword'];
+    $err = [
+        "email" => "",
+        "password" => ""
+    ];
 
-//     $errMail = "";
-//     $errPass = "";
+    session_start();
 
-//     $sqlFindUser = "SELECT * FROM users WHERE mail = '$email'";
-//     $user = executeQuery($sqlFindUser, true);
+    if(isset($_POST['btn_submit'])){
+        // Mail
+        if(empty($_POST['email'])){
+            $err['email'] = "Bạn chưa nhập Email!";
+        } else {
 
-//     if($user){
-//         return $errMail = "Email đã tồn tại trong hệ thống!";
-//     } else {
-//         if($pass !== $repass || $repass == ""){
-//             return $errPass = "Mật khẩu xác nhận không chính xác!";
-//         } else {
+            $mail = $_POST['email'];
 
-//             $passHasd = md5($pass);
+            $sql_get_user_by_email  = "SELECT * FROM `users` WHERE email = '$mail'";
+            $user = executeQuery($sql_get_user_by_email, false) ;
 
-//             $sqlAddUser = "INSERT INTO `users`(`name`, `mail`, `password`,  `role`) VALUES ('$name','$email', '$passHasd', 0 )";
-//             $newUser = executeQuery($sqlFindUser, true);
-//             if($newUser) {
-//                 return $success = "Đăng ký tài khoản thành công!";
-//             }
-//         }
-//     }
+            if(!isset($user)){
+                $err['email'] = "Email không tồn tại!";
+            } else {
+                if(empty($_POST['password'])){
+                    $err['password'] = "Bạn chưa nhập mật khẩu!";
+                } else {
+                    $password = $_POST['password'];
+                    if (md5($password) != $user['password']) {
+                        $err['password'] = "Mật khẩu không chính xác!";
+                    } else {
+                        $_SESSION['user'] = [
+                            "email" => $user['email'],
+                            "name" => $user['name'],
+                            "role" => $user['role']
+                        ];
 
-
-
-// }
-
+                        var_dump($_SESSION['user']);
+                        sleep(1);
+                        header('location: ./index.php');
+                    }
+                }
+            }
+        }
+    }
 
 
 ?>
@@ -64,13 +76,14 @@
 
     <div class="container col-md-6 col-12 form_sigin_signup" id="container">
         <div class="form-container col-md-6 col-12">
-            <form action="#">
-                <h1>Đăng Nhập</h1>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Mật khẩu" />
-                <a href="#">Quên mật khẩu?</a> <br>
-                <button>Đăng Nhập</button>
-            </form>
+        <h3 style="text-align: center">Đăng nhập</h3>
+        <form action="" method="POST">
+            <input value="<?php echo $mail ?>" type="text" placeholder="Email" name="email" id="">
+            <p  style="text-align: left;color: red ;padding: 0;margin: 0;font-size: 15px;"><?php echo $err['email'] ?></p>
+            <input value="<?php echo $password ?>" type="password" placeholder="Mật khẩu" name="password" id="">
+            <p  style="text-align: left;color: red ;padding: 0;margin: 0;font-size: 15px;"><?php echo $err['password'] ?></p>
+            <button type="submit" name="btn_submit">Đăng nhập</button>
+        </form>
         </div>
         <div class="overlay-container col-md-6 col-12">
             <div class="overlay">

@@ -1,9 +1,8 @@
 <?php
-    session_start();
     require ("./database/url.php");
 
     if(!empty($_SESSION["user"])){
-        $href_info = "./signIn.php";
+        $href_info = "./admin";
     } else {
         $href_info = "./signIn.php";
     }
@@ -23,9 +22,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav font-weight-bold mx-auto py-0">
-                <a href="index.php" class="nav-item nav-link">Trang Chủ</a>
-                <a href="blog.php" class="nav-item nav-link">Blog</a>
-                <a href="contact.php" class="nav-item nav-link">Liên Hệ</a>
+               
             </div>
             <a href="<?= $href_info ?>">
                 <i class="fas fa-user" style="color: #00394f;"></i>

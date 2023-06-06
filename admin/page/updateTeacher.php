@@ -11,7 +11,7 @@ $sqlGetDetailShift = "SELECT * from detailClass join class on detailClass.idClas
 $dataDetailShift = empty(executeQuery($sqlGetDetailShift, true)) ? [] : executeQuery($sqlGetDetailShift, true);
 
 $getTeacher = "select * from teachers where idTeacher = $idTeacher ";
-$dataTeacher = executeQuery($sqlGetDetailShift, false);
+$dataTeacher = executeQuery($getTeacher, false);
 
 if(isset($_POST['btnSubmit'])){
     $nameTeacher = $_POST['nameTeacher'];
@@ -68,38 +68,34 @@ if(isset($_POST['btnSubmit'])){
                     <input value="<?= $dataTeacher['cccd'] ?>" required name="cccd" type="text">
                 </div>
                 <div class="itemForm">
-                    <p>Lớp phụ trách thứ nhất:</p>
+                    <p>Lớp phụ trách hiện tại:</p>
                     <select name="class1"  required>
-                        <option selected disabled  hidden>Chọn lớp</option>
                         <?php foreach ($dataClass as $key => $value): ?>
-                            <option value="<?= $value['id_class'] ?>"><?= $value["class_name"] ?></option>
+                            <option <?= ($dataTeacher['class1'] == $value['id_class']  ) ? 'selected' : '' ?> value="<?= $value['id_class'] ?>"><?= $value["class_name"] ?></option>
                         <?php endforeach ?>
                     </select>
                 </div>
                 <div class="itemForm">
-                    <p>Ca phụ trách thứ nhất:</p>
+                    <p>Ca phụ trách hiện tại:</p>
                     <select name="shift1"  required>
-                        <option selected disabled  hidden>Chọn ca phụ trách</option>
                         <?php foreach ($dataShift as $key => $value): ?>
-                            <option value="<?= $value['idShift'] ?>">Ca <?= $value["nameShift"] ?> ( <?= $value["hourStart"] ?> - <?= $value["hourEnd"]?>)</option>
+                            <option <?= ($dataTeacher['shift1'] == $value['idShift']  ) ? 'selected' : '' ?> value="<?= $value['idShift'] ?>">Ca <?= $value["nameShift"] ?> ( <?= $value["hourStart"] ?> - <?= $value["hourEnd"]?>)</option>
                         <?php endforeach ?>
                     </select>
                 </div>
                 <div class="itemForm">
-                    <p>Lớp phụ trách thứ hai:</p>
+                    <p>Lớp phụ trách hiện tại:</p>
                     <select name="class2"  required>
-                        <option selected disabled  hidden>Chọn lớp</option>
                         <?php foreach ($dataClass as $key => $value): ?>
-                            <option value="<?= $value['id_class'] ?>"><?= $value["class_name"] ?></option>
+                            <option <?= ($dataTeacher['class2'] == $value['id_class']  ) ? 'selected' : '' ?> value="<?= $value['id_class'] ?>"><?= $value["class_name"] ?></option>
                         <?php endforeach ?>
                     </select>
                 </div>
                 <div class="itemForm">
-                    <p>Ca phụ trách thứ hai:</p>
+                    <p>Ca phụ trách hiện tại:</p>
                     <select name="shift2"  required>
-                        <option selected disabled  hidden>Chọn ca phụ trách</option>
                         <?php foreach ($dataShift as $key => $value): ?>
-                            <option value="<?= $value['idShift'] ?>">Ca <?= $value["nameShift"] ?> ( <?= $value["hourStart"] ?> - <?= $value["hourEnd"]?>)</option>
+                            <option <?= ($dataTeacher['shift2'] == $value['idShift']  ) ? 'selected' : '' ?> value="<?= $value['idShift'] ?>">Ca <?= $value["nameShift"] ?> ( <?= $value["hourStart"] ?> - <?= $value["hourEnd"]?>)</option>
                         <?php endforeach ?>
                     </select>
                 </div>

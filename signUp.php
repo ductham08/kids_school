@@ -1,33 +1,79 @@
 <?php
+    require_once("./database/config.php");
 
-// if(isset($_POST['btnSubmit'])){ 
+    $name = "";
+    $mail = "";
+    $password = "";
+    $re_password = "";
 
-//     $email = $_POST['user_email'];
-//     $pass = $_POST['password'];
+    $err = [
+        "name" => "",
+        "email" => "",
+        "password" => "",
+        "re_password" => "",
+        "status" => ""
+    ];
 
-//     $sqlFindUser = "SELECT * FROM users WHERE mail = '$email'";
-//     $user = executeQuery($sqlFindUser, true);
+if(isset($_POST['btn_submit'])){
+    
+    
 
-//     if($user){
-//         return $errMail = "Email không tồn tại trong hệ thống!";
-//     } else {
-//         if($pass !== $repass || $repass == ""){
-//             return $errPass = "Mật khẩu không chính xác!";
-//         } else {
-
-//             $passHasd = md5($pass);
-
-//             $sqlAddUser = "INSERT INTO `users`(`name`, `mail`, `password`,  `role`) VALUES ('$name','$email', '$passHasd', 0 )";
-//             $newUser = executeQuery($sqlFindUser, true);
-//             if($newUser) {
-//                 return $success = "Đăng ký tài khoản thành công!";
-//             }
-//         }
-//     }
+    $sql_get_user_by_email  = "SELECT * FROM `users` WHERE email = '$mail'";
+    $user = executeQuery($sql_get_user_by_email, true) ;
 
 
+    if(empty($_POST['name'])){
+        $err['name'] = "Họ và tên không được để trống !";
+    } else {
+        $name = $_POST['name'];
+    }
 
-// }
+    if(empty($_POST['email'])){
+        $err['email'] = "Email không được để trống !";
+    } else {
+        $mail = $_POST['email'];
+
+        $sql_get_user_by_email  = "SELECT * FROM `users` WHERE email = '$mail'";
+        $user = executeQuery($sql_get_user_by_email, true) ;
+
+        if(isset($user)){
+            $err['email'] = "Email đã tồn tại trong hệ thống!";
+        } 
+    }
+
+    // Pass
+    if(empty($_POST['password'])){
+        $err['password'] = "Mật khẩu không được để trống!";
+    } else {
+        $password = $_POST['password'];
+    }
+   
+    // Re pass
+    if(empty($_POST['re_password'])){
+        $err['re_password'] = "Chưa xác nhận lại mật khẩu!";
+    } else {
+        $re_password = $_POST['re_password'];
+    }
+
+    // Validate pass
+    if (isset($password) && isset($re_password)) {
+        if ($password != $re_password) {
+            $err['re_password'] = "Mật khẩu xác nhận không chính xác!";
+        } else {
+            $pass_md5 = md5($password);
+        }
+    }
+
+   if(empty($err['name']) && empty($err['email']) && empty($err['password']) && empty($err['re_password']) ){
+    
+    $sql_signup = "INSERT INTO `users`( `email`, `name`, `password`, `role`) VALUES ('$mail','$name','$pass_md5','0')";
+    executeQuery($sql_signup, true);
+    $err['status'] = "Đăng ký tài khoản thành công!";
+
+   }
+    
+
+}
 
 
 
@@ -59,22 +105,24 @@
 
     <div class="container col-md-6 col-12 form_sigin_signup" id="container">
         <div class="form-container col-md-6 col-12">
-            <form action="./up.php" method="POST" enctype="multipart/form-data">
-                <h1>Đăng Ký</h1>
-                <p><?= $success ?></p>
-                <input type="text" required name="user_name" placeholder="Họ và Tên" />
-                <input type="text" required name="user_email" placeholder="Email" />
-                <p><?= $errMail ?></p>
-                <input type="password" required name="password" placeholder="Mật khẩu" />
-                <input type="password" required name="repassword" placeholder="Xác nhận mật khẩu" />
-                <p><?= $errPass ?></p>
-                <button type="submit" name="btnSubmit">Đăng ký</button>
+            <h3 style="text-align: center">Đăng ký</h3>
+            <form action="" method="POST">
+                <p style="text-align: left;color: #2c86b9 ;padding: 0;margin: 0;font-size: 15px;"> <?php echo $err['status'] ?></p>
+                <input value="<?php echo $name ?>" type="text" placeholder="Họ và tên" name="name">
+                <p style="text-align: left;color: red ;padding: 0;margin: 0;font-size: 15px;"><?php echo $err['name'] ?></p>
+                <input value="<?php echo $mail ?>" type="text" placeholder="Email" name="email">
+                <p style="text-align: left;color: red ;padding: 0;margin: 0;font-size: 15px;"><?php echo $err['email'] ?></p>
+                <input value="<?php echo $password ?>" type="password" placeholder="Mật khẩu" name="password">
+                <p style="text-align: left;color: red ;padding: 0;margin: 0;font-size: 15px;"><?php echo $err['password'] ?></p>
+                <input value="<?php echo $re_password ?>" type="password" placeholder="Xác nhận mật khẩu" name="re_password">
+                <p style="text-align: left;color: red ;padding: 0;margin: 0;font-size: 15px;"><?php echo $err['re_password'] ?></p>
+                <button type="submit" name="btn_submit">Đăng ký</button>
             </form>
         </div>
         <div class="overlay-container col-md-6 col-12">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1>Chào mừng bạn đến với KidKinder!</h1>
+                    <h1>Chào mừng bạn</h1>
                     <p>Nếu bạn đã có tài khoản, vui lòng chọn đăng nhập</p>
                     <p><a href="./signIn.php">Đăng Nhập</a></p>
                 </div>

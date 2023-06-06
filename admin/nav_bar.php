@@ -1,6 +1,8 @@
 <?php
-
 require "../database/url.php";
+
+$admin = $_SESSION['user'];
+$role = $admin['role'];
 
 ?>
 
@@ -11,40 +13,46 @@ require "../database/url.php";
 <div class="nav">
     <h3>Kidkinder</h3>
     <ul>
-        <li>
+        <li style="display: <?= ($role == 1 || $role == 3) ? '' : 'none' ?>;" >
             <a href="./?action=students">
                 <i class="fas fa-user-graduate"></i>
                 Học Viên
             </a>
         </li>
-        <li>
+        <li style="display: <?= ($role == 1 || $role == 3) ? '' : 'none' ?>;">
             <a href="./?action=register-students">
                 <i class="fas fa-user-graduate"></i>
                 Danh Sách Đăng Ký
             </a>
         </li>
-        <li>
+        <li style="display: <?= ($role != 0) ? '' : 'none' ?>;">
             <a href="?action=room">
                 <i class="fas fa-home"></i>
                 Lớp Học
             </a>
         </li>
-        <li>
+        <li style="display: <?= ($role == 1 || $role == 4 || $role == 2) ? '' : 'none' ?>;">
             <a href="?action=teacher">
                 <i class="fas fa-chalkboard-teacher"></i>
                 Giáo viên
             </a>
         </li>
-        <li>
+        <li style="display: <?= ($role == 1 || $role == 4 || $role == 2) ? '' : 'none' ?>;">
             <a href="?action=shift">
                 <i class="fas fa-newspaper"></i>
                 Ca giảng dạy
             </a>
         </li>
-        <li>
+        <li style="display: <?= ($role == 1 ) ? '' : 'none' ?>;">
             <a href="?action=users">
                 <i class="fas fa-users"></i>
                 Người Dùng
+            </a>
+        </li>
+        <li>
+            <a href="../logout.php">
+                <i class="fas fa-users"></i>
+                Đăng xuất
             </a>
         </li>
     </ul>
